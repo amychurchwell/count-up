@@ -6,13 +6,18 @@ var countBy = function(countTo, countBy){
     output.push(total);
   }
   return output;
-}
-
+};
 
 $('document').ready(function(){
   $('#formID').submit(function(event){
-    
-  });
+    var outputArray = [];
+    var countToInput = parseInt($("#countTo").val());
+    var countByInput = parseInt($("#countBy").val());
+    outputArray = countBy(countToInput,countByInput);
 
-  event.preventDefault();
+    alert(outputArray);
+
+
+    event.preventDefault();
+  });
 });
